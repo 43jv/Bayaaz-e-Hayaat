@@ -1,0 +1,14 @@
+@media screen and (max-width: 400px) {
+  #features {
+    padding: 20px;
+    width: 111%;
+  }
+  #about,
+  #contact {
+    width: 111%;
+  }
+
+  #portfolio {
+    width: 110%;
+  }
+}
