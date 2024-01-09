@@ -4,10 +4,10 @@ import './index.css';
 // import App from './App';
 
 import {BrowserRouter, Routes, Route} from "react-router-dom"
-import Archive from './components/urdu';
+import Archive from './components/archive';
 import Home  from './components/home';
 import Layout from './components/layout';
-
+import UrduText from './components/urdu';
 export default function App() {
   return (
     <BrowserRouter>
@@ -15,6 +15,7 @@ export default function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />{" "}
           <Route path="archive" element={<Archive />} /> 
+          <Route path="urdu" element={<UrduText />} /> 
         </Route> 
       </Routes> 
     </BrowserRouter>

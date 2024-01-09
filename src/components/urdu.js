@@ -1,6 +1,6 @@
 import React from "react";
 
-function Archive() {
+function UrduText() {
     
   return(
   <div className="overlay" style={{marginTop: 7 + 'em'}}>
@@ -108,5 +108,5 @@ function Archive() {
   </div>
   );
 }
-export default Archive;
+export default UrduText;
 
