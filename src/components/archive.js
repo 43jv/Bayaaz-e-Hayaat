@@ -16,13 +16,9 @@ import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-import A from "./data/AKSZ.png"
 import Apdf from "./data/Aksz.pdf"
-import B from "./data/BQAK.png"
 import Bpdf from "./data/Bqak.pdf"
-import C from "./data/HBC.png"
 import Cpdf from "./data/Hbc.pdf"
-import D from "./data/RAH.png"
 import Dpdf from "./data/Rah.pdf"
 
 const cards = [1, 2, 3, 4];
@@ -57,7 +53,7 @@ export default function Archive() {
                       // 16:9
                       pt: '56.25%',
                     }}
-                    image={A}
+                    image={Apdf}
                   />
                   <CardContent sx={{ flexGrow: 1 }}>
                     <Typography gutterBottom variant="h5" component="h2">
@@ -83,7 +79,7 @@ export default function Archive() {
                       // 16:9
                       pt: '56.25%',
                     }}
-                    image={B}
+                    image={Bpdf}
                   />
                   <CardContent sx={{ flexGrow: 1 }}>
                     <Typography gutterBottom variant="h5" component="h2">
@@ -109,7 +105,7 @@ export default function Archive() {
                       // 16:9
                       pt: '56.25%',
                     }}
-                    image={C}
+                    image={Cpdf}
                   />
                   <CardContent sx={{ flexGrow: 1 }}>
                     <Typography gutterBottom variant="h5" component="h2">
@@ -135,7 +131,7 @@ export default function Archive() {
                       // 16:9
                       pt: '56.25%',
                     }}
-                    image={D}
+                    image={Dpdf}
                   />
                   <CardContent sx={{ flexGrow: 1 }}>
                     <Typography gutterBottom variant="h5" component="h2">
