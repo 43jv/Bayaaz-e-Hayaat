@@ -33,9 +33,7 @@ function Navigation() {
             <li>
               <Link to="/archive">Archive</Link>
             </li>
-            <li>
-              <Link to="/urdu">Urdu Demo</Link>
-            </li>
+            
           </ul>
         </div>
       </div>

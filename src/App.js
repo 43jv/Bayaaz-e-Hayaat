@@ -13,7 +13,7 @@ const App = () => {
       <Navigation />
       <Routes>
         <Route path="/" exact component={Home} />
-        <Route path="/urdu" exact component={UrduText} />
+        <Route path="/urdu"  component={UrduText} />
         <Route path="/archive" component={Archive} />
       </Routes>
     </Router>

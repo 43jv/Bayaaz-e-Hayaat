@@ -13,8 +13,10 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import Link from '@mui/material/Link';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { Link } from 'react-router-dom';  // Import Link from react-router-dom
+
+import UrduText from './urdu';  
 
 import AKSZ from "./data/Adeeba_ki_Samaaji_Zimmedaari.pdf"
 import BQAK from "./data/Badalti_Qudratein_aur_Khawateen.pdf"
@@ -32,9 +34,8 @@ export default function Archive() {
       <CssBaseline />
       <AppBar position="relative">
         <Toolbar>
-        
           <Typography variant="h6" color="inherit" noWrap>
-            Album layout
+            Archive
           </Typography>
         </Toolbar>
       </AppBar>
@@ -142,7 +143,8 @@ export default function Archive() {
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small" href = {RAH} target = "_blank">View</Button>
+               
+                  <Button component={Link} to="/urdu" size="small" href = {HBC} target = "_blank">View</Button>
                   </CardActions>
                 </Card>
                 
