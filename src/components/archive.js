@@ -16,10 +16,10 @@ import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-import Apdf from "./data/Aksz.pdf"
-import Bpdf from "./data/Bqak.pdf"
-import Cpdf from "./data/Hbc.pdf"
-import Dpdf from "./data/Rah.pdf"
+import AKSZ from "./data/Adeeba_ki_Samaaji_Zimmedaari.pdf"
+import BQAK from "./data/Badalti_Qudratein_aur_Khawateen.pdf"
+import HBC from "./data/Humne_Bandooq_Chalaai.pdf"
+import RAH from "./data/Rationing _aur_Hum.pdf"
 
 const cards = [1, 2, 3, 4];
 
@@ -53,7 +53,7 @@ export default function Archive() {
                       // 16:9
                       pt: '56.25%',
                     }}
-                    image={Apdf}
+                    image={AKSZ}
                   />
                   <CardContent sx={{ flexGrow: 1 }}>
                     <Typography gutterBottom variant="h5" component="h2">
@@ -64,7 +64,7 @@ export default function Archive() {
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small" href = {Apdf} target = "_blank">View</Button>
+                    <Button size="small" href = {AKSZ} target = "_blank">View</Button>
                   </CardActions>
                 </Card>
                 
@@ -79,7 +79,7 @@ export default function Archive() {
                       // 16:9
                       pt: '56.25%',
                     }}
-                    image={Bpdf}
+                    image={BQAK}
                   />
                   <CardContent sx={{ flexGrow: 1 }}>
                     <Typography gutterBottom variant="h5" component="h2">
@@ -90,7 +90,7 @@ export default function Archive() {
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small" href = {Bpdf} target = "_blank">View</Button>
+                    <Button size="small" href = {BQAK} target = "_blank">View</Button>
                   </CardActions>
                 </Card>
                 
@@ -105,7 +105,7 @@ export default function Archive() {
                       // 16:9
                       pt: '56.25%',
                     }}
-                    image={Cpdf}
+                    image={HBC}
                   />
                   <CardContent sx={{ flexGrow: 1 }}>
                     <Typography gutterBottom variant="h5" component="h2">
@@ -116,7 +116,7 @@ export default function Archive() {
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small" href = {Cpdf} target = "_blank">View</Button>
+                    <Button size="small" href = {HBC} target = "_blank">View</Button>
                   </CardActions>
                 </Card>
                 
@@ -131,7 +131,7 @@ export default function Archive() {
                       // 16:9
                       pt: '56.25%',
                     }}
-                    image={Dpdf}
+                    image={RAH}
                   />
                   <CardContent sx={{ flexGrow: 1 }}>
                     <Typography gutterBottom variant="h5" component="h2">
@@ -142,7 +142,7 @@ export default function Archive() {
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small" href = {Dpdf} target = "_blank">View</Button>
+                    <Button size="small" href = {RAH} target = "_blank">View</Button>
                   </CardActions>
                 </Card>
                 
