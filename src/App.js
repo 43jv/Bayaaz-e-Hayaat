@@ -1,25 +1,23 @@
-// src/App.js
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Archive from './components/archive';
-import Home from './components/home';
-import Navigation from './components/navigation';
-import UrduText from './components/urdu'
-import Test from './components/test';
+import React from "react";
+import "./index.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import About from "./components/about";
+import Archive from "./components/archive";
+import Home from "./components/home";
+import Layout from "./components/layout";
+import UrduText from "./components/urdu";
 
-const App = () => {
+export default function App() {
   return (
-    <Router>
-      <Navigation />
+    <BrowserRouter>
       <Routes>
-        <Route path="/" exact component={Home} />
-        <Route path="/urdu"  component={UrduText} />
-        <Route path="/archive" component={Archive} />
-        <Route path="/test" component={Test} />
-
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="archive" element={<Archive />} />
+          <Route path="urdu/:pdfFileName" element={<UrduText />} />
+        </Route>
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
-};
-
-export default App;
+}

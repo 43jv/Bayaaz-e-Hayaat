@@ -1,25 +1,24 @@
 import React from "react";
-import MKM from "./data/Mom_ki_Maryam.pdf"
-
+import { useParams } from "react-router-dom";
 function UrduText() {
+  // Access the PDF file name from the route parameters
+  const { pdfFileName } = useParams();
+
   return (
     <div>
-  <div style={{ flex: '1' }}>
-    <object
-      style={{ marginTop: '80px', width: '100%', height: 'calc(100vh - 80px)' }}
-      data={MKM}
-      type="application/pdf"
-    />
-  </div>
-  {/* <div style={{ flex: '1' }}>
-    <iframe
-      className="overlay"
-      src="./files/Mom_ki_Maryam.html"
-      style={{ marginTop: '80px', width: '100%', height: 'calc(100vh - 80px)' }}
-    ></iframe>
-  </div> */}
-</div>
-
+      <div
+        style={{ height: "100vh", display: "flex", flexDirection: "column" }}
+      >
+        <div style={{ flex: "1", overflow: "auto" }}>
+          {/* Use the dynamically loaded PDF file */}
+          <object
+            style={{ width: "100%", height: "100%" }}
+            data={decodeURIComponent(pdfFileName)} // Decode the file name
+            type="application/pdf"
+          />
+        </div>
+      </div>
+    </div>
   );
 }
 

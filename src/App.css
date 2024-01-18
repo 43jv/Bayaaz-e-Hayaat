@@ -3,12 +3,7 @@
     padding: 20px;
     width: 111%;
   }
-  #about,
-  #contact {
+  #about {
     width: 111%;
-  }
-
-  #portfolio {
-    width: 110%;
   }
 }
