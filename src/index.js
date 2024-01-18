@@ -8,6 +8,8 @@ import Archive from './components/archive';
 import Home  from './components/home';
 import Layout from './components/layout';
 import UrduText from './components/urdu';
+import Test from './components/test';
+
 export default function App() {
   return (
     <BrowserRouter>
@@ -16,6 +18,7 @@ export default function App() {
           <Route index element={<Home />} />{" "}
           <Route path="archive" element={<Archive />} /> 
           <Route path="urdu" element={<UrduText />} /> 
+          <Route path="test" element={<Test />} /> 
         </Route> 
       </Routes> 
     </BrowserRouter>

@@ -22,6 +22,8 @@ import AKSZ from "./data/Adeeba_ki_Samaaji_Zimmedaari.pdf"
 import BQAK from "./data/Badalti_Qudratein_aur_Khawateen.pdf"
 import HBC from "./data/Humne_Bandooq_Chalaai.pdf"
 import RAH from "./data/Rationing _aur_Hum.pdf"
+import YB from "./data/Yaadash_Bakhair.pdf"
+import MKM from "./data/Mom_ki_Maryam.pdf"
 
 const cards = [1, 2, 3, 4];
 
@@ -136,20 +138,72 @@ export default function Archive() {
                   />
                   <CardContent sx={{ flexGrow: 1 }}>
                     <Typography gutterBottom variant="h5" component="h2">
-                    Rationing aur Hum
+                   Rationing aur Hum
                     </Typography>
                     <Typography>
                         TODO: Include Author and other info
                     </Typography>
                   </CardContent>
                   <CardActions>
-               
-                  <Button component={Link} to="/urdu" size="small" href = {HBC} target = "_blank">View</Button>
+                    <Button size="small" href = {RAH} target = "_blank">View</Button>
                   </CardActions>
                 </Card>
                 
               </Grid>
-            
+              <Grid item key={1} xs={12} sm={6} md={4}>
+                <Card
+                  sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
+                >
+                  <CardMedia
+                    component="div"
+                    sx={{
+                      // 16:9
+                      pt: '56.25%',
+                    }}
+                    image={MKM}
+                  />
+                  <CardContent sx={{ flexGrow: 1 }}>
+                    <Typography gutterBottom variant="h5" component="h2">
+                   Mom ki Maryam
+                    </Typography>
+                    <Typography>
+                        Jeelani Bano
+                    </Typography>
+                  </CardContent>
+                  <CardActions>
+               
+                  <Button component={Link} to="/urdu" size="small" target = "_blank">View</Button>
+                  </CardActions>
+                </Card>
+                
+              </Grid>
+              <Grid item key={1} xs={12} sm={6} md={4}>
+                <Card
+                  sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
+                >
+                  <CardMedia
+                    component="div"
+                    sx={{
+                      // 16:9
+                      pt: '56.25%',
+                    }}
+                   image={YB}
+                  />
+                  <CardContent sx={{ flexGrow: 1 }}>
+                    <Typography gutterBottom variant="h5" component="h2">
+                   Yaadash Bakhair
+                    </Typography>
+                    <Typography>
+                    
+                    </Typography>
+                  </CardContent>
+                  <CardActions>
+               
+                  <Button component={Link} to="/test" size="small" target = "_blank">View</Button>
+                  </CardActions>
+                </Card>
+                
+              </Grid>
           </Grid>
         </Container>
       </main>

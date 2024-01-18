@@ -1,23 +1,23 @@
 import React from "react";
-import RAH from "./data/Rationing _aur_Hum.pdf"
+import MKM from "./data/Mom_ki_Maryam.pdf"
 
 function UrduText() {
   return (
-    <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+    <div>
   <div style={{ flex: '1' }}>
     <object
       style={{ marginTop: '80px', width: '100%', height: 'calc(100vh - 80px)' }}
-      data={RAH}
+      data={MKM}
       type="application/pdf"
     />
   </div>
-  <div style={{ flex: '1' }}>
+  {/* <div style={{ flex: '1' }}>
     <iframe
       className="overlay"
       src="./files/Mom_ki_Maryam.html"
       style={{ marginTop: '80px', width: '100%', height: 'calc(100vh - 80px)' }}
     ></iframe>
-  </div>
+  </div> */}
 </div>
 
   );
