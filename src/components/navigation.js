@@ -1,33 +1,77 @@
-import React from "react";
-import { BrowserRouter, Route, Link } from "react-router-dom";
+import React from 'react';
+import { AppBar, Toolbar, Typography } from '@material-ui/core';
+import { makeStyles, createTheme, ThemeProvider } from '@material-ui/core/styles';
+import { Link } from 'react-router-dom';
 
-function Navigation() {
+const useStyles = makeStyles({
+  root: {
+    backgroundColor: '#ffffff', 
+  },
+  title: {
+    fontFamily: 'Raleway, sans-serif',
+    color: '#8b4513', 
+    fontSize: '24px',
+    fontWeight: 'bold',
+    flexGrow: 1,
+  },
+  link: {
+    fontFamily: 'Raleway, sans-serif',
+    color: '#8b4513',
+    fontSize: '18px',
+    fontWeight: 'bold',
+    textDecoration: 'none',
+    position: 'relative',
+    outline: 'none', // Remove focus outline
+    display: 'inline-block', // Align links horizontally
+    marginRight: '20px', // Add some space between the links
+    '&:after': {
+      content: '""',
+      position: 'absolute',
+      bottom: 0,
+      left: 0,
+      right: 0,
+      height: '2px',
+      backgroundColor: 'black',
+      transform: 'scaleX(0)',
+      transition: 'transform 0.3s ease-in-out',
+    },
+    '&:hover': {
+      color: 'black', // Keep text color black on hover
+      '&:after': {
+        transform: 'scaleX(1)',
+      },
+    },
+  },
+  listItem: {
+    listStyle: 'none', // Remove bullet points
+  },
+});
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#ffffff',
+    },
+  },
+});
+
+export default function NavBar() {
+  const classes = useStyles();
+
   return (
-    <nav id="menu" className="navbar navbar-default navbar-fixed-top">
-      <div className="container">
-        <div className="navbar-header">
-          <a className="navbar-brand page-scroll" href="#page-top">
-            Baayaz-e-Haayat 
-          </a>
-        </div>
-        <div
-          className="collapse navbar-collapse"
-          id="bs-example-navbar-collapse-1"
-        >
-          <ul className="nav navbar-nav navbar-right">
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About Us</Link>
-            </li>
-            <li>
-              <Link to="/archive">Archive</Link>
-            </li>
-          </ul>
-        </div>
+    <ThemeProvider theme={theme}>
+      <div>
+        <AppBar position="fixed" className={classes.root}>
+          <Toolbar>
+            <Typography className={classes.title}>
+              Baayaz-e-Hayaat
+            </Typography>
+            <li className={classes.listItem}><Link to="/" className={classes.link}>Home</Link></li>
+            <li className={classes.listItem}><Link to="/about" className={classes.link}>About Us</Link></li>
+            <li className={classes.listItem}><Link to="/author" className={classes.link}>Authors</Link></li>
+          </Toolbar>
+        </AppBar>
       </div>
-    </nav>
+    </ThemeProvider>
   );
 }
-export default Navigation;

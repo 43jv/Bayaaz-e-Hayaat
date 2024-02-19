@@ -6,7 +6,7 @@ function About() {
       <div id="about">
         <div className="container">
           <div className="row">
-            <div className="col-xs-12 col-md-20">
+            <div style={{ marginTop: "15vh" }}>
               <div className="about-text">
                 <h2>About Us</h2>
                 <p>
@@ -29,7 +29,6 @@ function About() {
                   and literary papers of writers, scholars, and intellectuals
                   working in different languages in Hyderabad.
                 </p>
-                <div className="list-style"></div>
               </div>
             </div>
           </div>
@@ -40,3 +39,4 @@ function About() {
 }
 
 export default About;
+                <div className="list-style"></div>

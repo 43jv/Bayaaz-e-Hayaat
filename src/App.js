@@ -3,9 +3,10 @@ import "./index.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import About from "./components/about";
 import Archive from "./components/archive";
+import Author from "./components/author";
 import Home from "./components/home";
 import Layout from "./components/layout";
-import UrduText from "./components/urdu";
+import RenderDoc from "./components/RenderDoc";
 
 export default function App() {
   return (
@@ -13,9 +14,10 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="archive" element={<Archive />} />
-          <Route path="urdu/:pdfFileName" element={<UrduText />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/archive" element={<Archive />} />
+          <Route path="/author" element={<Author />} />
+          <Route path="/RenderDoc/:pdfFileName" element={<RenderDoc />} />
         </Route>
       </Routes>
     </BrowserRouter>
