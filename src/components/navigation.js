@@ -64,7 +64,7 @@ export default function NavBar() {
         <AppBar position="fixed" className={classes.root}>
           <Toolbar>
             <Typography className={classes.title}>
-              Baayaz-e-Hayaat
+            BAYĀZ-E-HAYĀT
             </Typography>
             <li className={classes.listItem}><Link to="/" className={classes.link}>Home</Link></li>
             <li className={classes.listItem}><Link to="/about" className={classes.link}>About Us</Link></li>

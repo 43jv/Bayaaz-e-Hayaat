@@ -10,21 +10,21 @@ function About() {
               <div className="about-text">
                 <h2>About Us</h2>
                 <p>
-                  “Bayaaz” in Urdu refers to a notebook or diary in which people
+                 "Bayāz" in Urdu refers to a notebook or diary in which people
                   write their favourite poetry or other memorable ideas and
-                  words. Owning and maintaining a bayaaz was once considered a
+                  words. Owning and maintaining a Bayāz was once considered a
                   mark of education and cultivation, for without a thorough
                   knowledge of poetry, no person was deemed to be truly educated
                   or cultured. Over time, as middle-class women acquired
-                  education, a bayaaz or notebook acquired new functionalities
+                  education, a Bayāz or notebook acquired new functionalities
                   that represented the different roles women had to
                   simultaneously juggle. Hyderabadi writer Zeenath Sajida
-                  (1924-2009) has eloquently described how a bayaaz is, in fact,
+                  (1924-2009) has eloquently described how a Bayāz is, in fact,
                   a metaphor for the reality of women’s lives, for squeezed
                   between lists of expenses and other domestic priorities – are
                   their dreams and aspirations, writings and plans, hurriedly
                   scribbled in the margins, recorded on the edges of time.
-                  Bayaaz-e-Hayaat, or the “Notebook of Life,” aims to collect,
+                  Bayāz e-Hayāt, or the “Notebook of Life,” aims to collect,
                   digitize, preserve, and exhibit in different media the private
                   and literary papers of writers, scholars, and intellectuals
                   working in different languages in Hyderabad.

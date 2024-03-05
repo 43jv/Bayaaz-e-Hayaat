@@ -1,4 +1,5 @@
 import React from "react";
+import Carousel from "react-bootstrap/Carousel";
 import Button from "@mui/material/Button";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
@@ -18,8 +19,12 @@ import MKM from "./data/Mom_ki_Maryam.pdf";
 import RAH from "./data/Rationing_aur_Hum.pdf";
 import YB from "./data/Yaadash_Bakhair.pdf";
 import BES from "./data/Barish_e_Sang.pdf";
-import JB from "./data/Jeelani_Bano.png";
-
+import img1 from "./author_imgs/Jeelani_Bano.jpg";
+import img2 from "./author_imgs/Jeelani_Bano_Padmashri.png";
+import img3 from "./author_imgs/FAA1.jpg";
+import img4 from "./author_imgs/FAA2.jpg";
+import img5 from "./author_imgs/FAA3.jpg";
+import img6 from "./author_imgs/FAA4.jpg";
 
 const useStyles = makeStyles({
   link: {
@@ -105,7 +110,59 @@ const Archive = () => {
   return (  
   <div style={{ display: 'flex', marginTop:"12vh" }}>
   <div style={{ flex: 1, marginLeft: "1vw" }}>
-    <img src={JB} alt="Jeelani Bano" /> 
+  <Carousel
+        nextIcon={
+          <span aria-hidden="true" className="carousel-control-next-icon" style={{backgroundColor:"black"}} />
+        }
+        prevIcon={
+          <span aria-hidden="true" className="carousel-control-prev-icon" style={{backgroundColor:"black"}}/>
+        }
+        indicators={true}
+      >
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src={img1}
+            alt="First slide"
+            style={{objectFit:"cover", height:"50vh"}}
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src={img2}
+            alt="Second slide"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src={img3}
+            alt="Third slide"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src={img4}
+            alt="Fourth slide"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src={img5}
+            alt="Fifth slide"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src={img6}
+            alt="Sixth slide"
+          />
+        </Carousel.Item>
+        </Carousel>
     <p style={{marginTop: "1vh"}}>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
       fringilla, risus sed aliquet luctus, nisl nisl tincidunt nunc, id

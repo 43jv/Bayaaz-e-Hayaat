@@ -71,19 +71,10 @@ hr {
   border: 0;
 }
 /* Header Section */
-.intro {
-  /* display:flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
-  text-align: center;
-  background-image: url('../img/intro-bg.jpg');
-  background-repeat: no-repeat;
-  background-size: cover; /* or contain */
-  background-position: center;
-}
-.intro .overlay {
-  background: rgba(0, 0, 0, 0.2);
-}
+
+.carousel-image {
+  height: 50vh; 
+  object-fit: contain; }
 
 .intro h1 {
   font-family: "Raleway", sans-serif;
@@ -112,6 +103,5 @@ hr {
 }
 
 header .intro-text {
-  padding-top: 350px;
-  padding-bottom: 200px;
+  padding-top: 20vh;
 }

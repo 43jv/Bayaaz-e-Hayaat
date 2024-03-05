@@ -10,7 +10,7 @@ import Container from "@mui/material/Container";
 import { Link } from "react-router-dom";
 import { makeStyles } from '@material-ui/core/styles';
 
-import JB from "./data/Jeelani_Bano.png";
+import JB from "./data/Jeelani_Bano.jpg";
 
 const useStyles = makeStyles({
   link: {
