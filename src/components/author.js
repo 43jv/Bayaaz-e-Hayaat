@@ -8,53 +8,60 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { Link } from "react-router-dom";
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from "@material-ui/core/styles";
 
-import JB from "./data/Jeelani_Bano.jpg";
+import JB from "./author_imgs/Jeelani_Bano.jpg";
+import FAA from "./author_imgs/FAA2.jpg";
 
 const useStyles = makeStyles({
   link: {
-    fontFamily: 'Raleway, sans-serif',
-    color: 'blue',
-    textDecoration: 'none',
-    position: 'relative',
-    outline: 'none', // Remove focus outline
-    '&:after': {
+    fontFamily: "Raleway, sans-serif",
+    color: "blue",
+    textDecoration: "none",
+    position: "relative",
+    outline: "none", // Remove focus outline
+    "&:after": {
       content: '""',
-      position: 'absolute',
+      position: "absolute",
       bottom: 0,
       left: 0,
       right: 0,
-      height: '2px',
-      backgroundColor: 'blue',
-      transform: 'scaleX(0)',
-      transition: 'transform 0.3s ease-in-out',
+      height: "2px",
+      backgroundColor: "blue",
+      transform: "scaleX(0)",
+      transition: "transform 0.3s ease-in-out",
     },
-    '&:hover': {
-      color: 'blue', // Keep text color black on hover
-      '&:after': {
-        transform: 'scaleX(1)',
+    "&:hover": {
+      color: "blue", // Keep text color black on hover
+      "&:after": {
+        transform: "scaleX(1)",
       },
     },
-  }
+  },
 });
 
-const cardsData = [
+const authorCards = [
   {
     id: 1,
     title: "Jeelani Bano",
     image: JB,
-  }
+  },
+  {
+    id: 2,
+    title: "Fatima Alam Ali",
+    image: FAA,
+  },
 ];
+
 
 const Author = () => {
   const classes = useStyles();
 
   return (
-    <div style={{marginTop:'40px'}}>
+    <div style={{ marginTop: "40px" }}>
       <Container sx={{ py: 8 }} maxWidth="md">
         <Grid container spacing={4}>
-          {cardsData.map((card) => (
+          {authorCards.map((card) => (
             <Grid item key={card.id} xs={12} sm={6} md={4}>
               <Card
                 sx={{
@@ -65,7 +72,7 @@ const Author = () => {
               >
                 <CardMedia
                   component="div"
-                  sx={{ pt: "56.25%" }}
+                  sx={{ pt: "100%" }}
                   image={card.image}
                 />
                 <CardContent sx={{ flexGrow: 1, paddingBottom: 0 }}>
@@ -74,10 +81,7 @@ const Author = () => {
                   </Typography>
                 </CardContent>
                 <CardActions sx={{ paddingTop: 0 }}>
-                  <Link
-                    to="/archive"
-                    className={classes.link}
-                  >
+                  <Link to={`/archive/${card.title}`} className={classes.link}>
                     View
                   </Link>
                 </CardActions>

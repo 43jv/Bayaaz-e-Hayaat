@@ -14,7 +14,7 @@ function Home() {
   return (
     <div>
       <Carousel
-        style={{ height: "50vh", marginTop: "10vh" }}
+        style={{ height: "50vh", marginTop: "9vh" }}
         nextIcon={
           <span aria-hidden="true" className="carousel-control-next-icon" style={{backgroundColor:"black"}} />
         }
@@ -27,7 +27,7 @@ function Home() {
           <img
             className="d-block w-100"
             src={intro}
-            alt="First slide"
+            alt="Bayaz-e-Hayat: A Literary Archive of Hyderabad"
             style={{objectFit:"cover", height:"50vh"}}
           />
         </Carousel.Item>
@@ -35,7 +35,7 @@ function Home() {
           <img
             className="d-block w-100 carousel-image"
             src={img2}
-            alt="Second slide"
+            alt="Ameena Tahseen's Book"
           />
         </Carousel.Item>
         <Carousel.Item>

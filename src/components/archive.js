@@ -8,8 +8,8 @@ import CardMedia from "@mui/material/CardMedia";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
-import { makeStyles } from '@material-ui/core/styles';
-import { Link } from "react-router-dom";
+import { makeStyles } from "@material-ui/core/styles";
+import { Link, useParams } from "react-router-dom";
 
 import AKSZ from "./data/Adeeba_ki_Samaaji_Zimmedaari.pdf";
 import AEG from "./data/Aiwan_e_Ghazal.pdf";
@@ -28,32 +28,32 @@ import img6 from "./author_imgs/FAA4.jpg";
 
 const useStyles = makeStyles({
   link: {
-    fontFamily: 'Raleway, sans-serif',
-    color: 'blue',
-    textDecoration: 'none',
-    position: 'relative',
-    outline: 'none', // Remove focus outline
-    '&:after': {
+    fontFamily: "Raleway, sans-serif",
+    color: "blue",
+    textDecoration: "none",
+    position: "relative",
+    outline: "none", // Remove focus outline
+    "&:after": {
       content: '""',
-      position: 'absolute',
+      position: "absolute",
       bottom: 0,
       left: 0,
       right: 0,
-      height: '2px',
-      backgroundColor: 'blue',
-      transform: 'scaleX(0)',
-      transition: 'transform 0.3s ease-in-out',
+      height: "2px",
+      backgroundColor: "blue",
+      transform: "scaleX(0)",
+      transition: "transform 0.3s ease-in-out",
     },
-    '&:hover': {
-      color: 'blue', // Keep text color black on hover
-      '&:after': {
-        transform: 'scaleX(1)',
+    "&:hover": {
+      color: "blue", // Keep text color black on hover
+      "&:after": {
+        transform: "scaleX(1)",
       },
     },
-  }
+  },
 });
 
-const cardsData = [
+const authorWorks = [
   {
     id: 1,
     title: "Aiwan e Ghazal",
@@ -76,147 +76,130 @@ const cardsData = [
     id: 4,
     title: "Adeeba ki Samaaji Zimmedaari",
     image: AKSZ,
-    author: "", // Add actual author name
+    author: "Fatima Alam Ali", // Add actual author name
   },
   {
     id: 5,
     title: "Badalti Qudratein aur Khawateen",
     image: BQAK,
-    author: "",
+    author: "Fatima Alam Ali",
   },
   {
     id: 6,
     title: "Humne Bandooq Chalaai",
     image: HBC,
-    author: "",
+    author: "Fatima Alam Ali",
   },
   {
     id: 7,
     title: "Rationing aur Hum",
     image: RAH,
-    author: "",
+    author: "Fatima Alam Ali",
   },
   {
     id: 8,
     title: "Yaadash Bakhair",
     image: YB,
-    author: "",
+    author: "Fatima Alam Ali",
   },
 ];
 
+const authorImages = {
+  "Jeelani Bano": [img1, img2],
+  "Fatima Alam Ali": [img3, img4, img5, img6],
+  // Add more authors and their images here
+};
+
 const Archive = () => {
   const classes = useStyles();
+  const { author } = useParams();
 
-  return (  
-  <div style={{ display: 'flex', marginTop:"12vh" }}>
-  <div style={{ flex: 1, marginLeft: "1vw" }}>
-  <Carousel
-        nextIcon={
-          <span aria-hidden="true" className="carousel-control-next-icon" style={{backgroundColor:"black"}} />
-        }
-        prevIcon={
-          <span aria-hidden="true" className="carousel-control-prev-icon" style={{backgroundColor:"black"}}/>
-        }
-        indicators={true}
-      >
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src={img1}
-            alt="First slide"
-            style={{objectFit:"cover", height:"50vh"}}
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src={img2}
-            alt="Second slide"
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src={img3}
-            alt="Third slide"
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src={img4}
-            alt="Fourth slide"
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src={img5}
-            alt="Fifth slide"
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src={img6}
-            alt="Sixth slide"
-          />
-        </Carousel.Item>
-        </Carousel>
-    <p style={{marginTop: "1vh"}}>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-      fringilla, risus sed aliquet luctus, nisl nisl tincidunt nunc, id
-      aliquet nunc nisl id nunc. Nulla facilisi. Sed id enim non mauris
-      tincidunt tincidunt. Sed auctor, sem ac lacinia efficitur, mauris
-      justo fringilla urna, id luctus mauris elit id nisl. Sed at
-      vestibulum purus. Sed nec nunc euismod, aliquam metus nec, commodo
-      tellus. Nulla facilisi. Sed id enim non mauris tincidunt tincidunt.
-    </p>
-  <Link  className={classes.link} to="/author">Back</Link>
+  const filteredCards = authorWorks.filter((card) => card.author === author);
+  const carouselImages = authorImages[author] || []; // Default to an empty array if there are no images for this author
 
-  </div>
-  <div style={{ flex: 2 }}>
-    <Container sx={{ py: 2 }} maxWidth="md">
-      <Grid container spacing={4}>
-        {cardsData.map((card) => (
-          <Grid item key={card.id} xs={12} sm={6} md={4}>
-            <Card
-              sx={{
-                height: "100%",
-                display: "flex",
-                flexDirection: "column",
-              }}
-            >
-              <CardMedia
-                component="div"
-                sx={{ pt: "56.25%" }}
-                image={card.image}
+  return (
+    <div style={{ display: "flex", marginTop: "12vh" }}>
+      <div style={{ flex: 1, marginLeft: "1vw" }}>
+        <Carousel
+          nextIcon={
+            <span
+              aria-hidden="true"
+              className="carousel-control-next-icon"
+              style={{ backgroundColor: "black" }}
+            />
+          }
+          prevIcon={
+            <span
+              aria-hidden="true"
+              className="carousel-control-prev-icon"
+              style={{ backgroundColor: "black" }}
+            />
+          }
+          indicators={true}
+        >
+          {carouselImages.map((image, index) => (
+            <Carousel.Item key={index}>
+              <img
+                className="d-block w-100"
+                src={image}
+                style={{ objectFit: "contain", height: "50vh" }}
               />
-              <CardContent sx={{ flexGrow: 1, paddingBottom: 0 }}>
-                <Typography gutterBottom variant="h5" component="h2">
-                  {card.title}
-                </Typography>
-                <Typography>{`${card.author}`}</Typography>
-              </CardContent>
-
-              <CardActions >
-                <Link
-                  to={`/RenderDoc/${encodeURIComponent(card.image)}`}
-                  size="small"
-                  className={classes.link}
+            </Carousel.Item>
+          ))}
+        </Carousel>
+        <p style={{ marginTop: "1vh" }}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+          fringilla, risus sed aliquet luctus, nisl nisl tincidunt nunc, id
+          aliquet nunc nisl id nunc. Nulla facilisi. Sed id enim non mauris
+          tincidunt tincidunt. Sed auctor, sem ac lacinia efficitur, mauris
+          justo fringilla urna, id luctus mauris elit id nisl. Sed at vestibulum
+          purus. Sed nec nunc euismod, aliquam metus nec, commodo tellus. Nulla
+          facilisi. Sed id enim non mauris tincidunt tincidunt.
+        </p>
+        <Link className={classes.link} to="/author">
+          Back
+        </Link>
+      </div>
+      <div style={{ flex: 2 }}>
+        <Container sx={{ py: 2 }} maxWidth="md">
+          <Grid container spacing={4}>
+            {filteredCards.map((card) => (
+              <Grid item key={card.id} xs={12} sm={6} md={4}>
+                <Card
+                  sx={{
+                    height: "100%",
+                    display: "flex",
+                    flexDirection: "column",
+                  }}
                 >
-                  View
-                 
+                  <CardMedia
+                    component="div"
+                    sx={{ pt: "56.25%" }}
+                    image={card.image}
+                  />
+                  <CardContent sx={{ flexGrow: 1, paddingBottom: 0 }}>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      {card.title}
+                    </Typography>
+                    <Typography>{`${card.author}`}</Typography>
+                  </CardContent>
 
-                </Link>
-              </CardActions>
-            </Card>
+                  <CardActions>
+                    <Link
+                      to={`/RenderDoc/${encodeURIComponent(card.image)}`}
+                      size="small"
+                      className={classes.link}
+                    >
+                      View
+                    </Link>
+                  </CardActions>
+                </Card>
+              </Grid>
+            ))}
           </Grid>
-        ))}
-      </Grid>
-    </Container>
-  </div>
-</div>
+        </Container>
+      </div>
+    </div>
   );
 };
 

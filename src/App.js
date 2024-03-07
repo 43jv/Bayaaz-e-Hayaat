@@ -16,7 +16,7 @@ export default function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/archive" element={<Archive />} />
+          <Route path="/archive/:author" element={<Archive />} />
           <Route path="/author" element={<Author />} />
           <Route path="/RenderDoc/:pdfFileName" element={<RenderDoc />} />
         </Route>

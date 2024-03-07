@@ -7,7 +7,7 @@ function About() {
         <div className="container">
           <div className="row">
             <div style={{ marginTop: "15vh" }}>
-              <div className="about-text">
+              <div className="intro">
                 <h2>About Us</h2>
                 <p>
                  "Bayāz" in Urdu refers to a notebook or diary in which people
@@ -28,7 +28,16 @@ function About() {
                   digitize, preserve, and exhibit in different media the private
                   and literary papers of writers, scholars, and intellectuals
                   working in different languages in Hyderabad.
+                </p> <br/>
+                <h2>Contributors</h2>
+                <p>
+                <li> Paridhi Prasad</li>
+                <li>Jahnavi Voruganti </li>
+                <li> Ramsha Farhan </li>
+                <li> Dr. Nazia Akhtar</li>
+                <li> Dr. Kamal Karlapalem</li>
                 </p>
+
               </div>
             </div>
           </div>
