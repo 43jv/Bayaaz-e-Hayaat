@@ -7,7 +7,7 @@ function About() {
         <div className="container">
           <div className="row">
             <div style={{ marginTop: "15vh" }}>
-              <div className="intro">
+              <div >
                 <h2>About Us</h2>
                 <p>
                  "Bayāz" in Urdu refers to a notebook or diary in which people

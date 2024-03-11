@@ -18,7 +18,7 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/archive/:author" element={<Archive />} />
           <Route path="/author" element={<Author />} />
-          <Route path="/RenderDoc/:pdfFileName" element={<RenderDoc />} />
+          <Route path="/RenderDoc/:pdfFileNames" element={<RenderDoc />} />
         </Route>
       </Routes>
     </BrowserRouter>

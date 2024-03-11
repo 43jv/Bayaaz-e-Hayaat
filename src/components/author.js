@@ -45,6 +45,7 @@ const authorCards = [
     id: 1,
     title: "Jeelani Bano",
     image: JB,
+    bio: ""
   },
   {
     id: 2,

@@ -1,6 +1,5 @@
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
-import intro from "./carousel_imgs/intro.png";
 import img1 from "./carousel_imgs/1.jpg";
 import img2 from "./carousel_imgs/2.jpeg";
 import img3 from "./carousel_imgs/3.jpg";
@@ -9,71 +8,23 @@ import img5 from "./carousel_imgs/5.jpg";
 import img6 from "./carousel_imgs/6.jpg";
 import img7 from "./carousel_imgs/7.jpg";
 
-
 function Home() {
   return (
     <div>
-      <Carousel
-        style={{ height: "50vh", marginTop: "9vh" }}
-        nextIcon={
-          <span aria-hidden="true" className="carousel-control-next-icon" style={{backgroundColor:"black"}} />
-        }
-        prevIcon={
-          <span aria-hidden="true" className="carousel-control-prev-icon" style={{backgroundColor:"black"}}/>
-        }
-        indicators={true}
-      >
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src={intro}
-            alt="Bayaz-e-Hayat: A Literary Archive of Hyderabad"
-            style={{objectFit:"cover", height:"50vh"}}
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100 carousel-image"
-            src={img2}
-            alt="Ameena Tahseen's Book"
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100 carousel-image"
-            src={img3}
-            alt="Third slide"
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100 carousel-image"
-            src={img4}
-            alt="Fourth slide"
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100 carousel-image"
-            src={img5}
-            alt="Fifth slide"
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100 carousel-image"
-            src={img6}
-            alt="Sixth slide"
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100 carousel-image"
-            src={img7}
-            alt="Seventh slide"
-          />
-        </Carousel.Item>
-      </Carousel>
+      <header id="header">
+        <div className="intro">
+          <div className="overlay">
+            <div className="container">
+              <div className="row">
+                <div className="intro-text">
+                  <h1>Bayāz-e-Hayāt</h1>
+                  <p>A Textual Archive of Hyderabad</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
       <div id="about">
         <div className="container">
           <div className="row">
@@ -102,6 +53,33 @@ function Home() {
             </div>
           </div>
         </div>
+      </div>
+      <div style={{ display: "flex", overflowX: "auto", width: "100%", marginTop:'10vh' }}>
+        <img
+          className="d-block w-100 carousel-image"
+          src={img1}
+          alt="First slide"
+        />
+        <img
+          className="d-block w-100 carousel-image"
+          src={img2}
+          alt="Ameena Tahseen's Book"
+        />
+        <img
+          className="d-block w-100 carousel-image"
+          src={img3}
+          alt="Third slide"
+        />
+        <img
+          className="d-block w-100 carousel-image"
+          src={img4}
+          alt="Fourth slide"
+        />
+        <img
+          className="d-block w-100 carousel-image"
+          src={img5}
+          alt="Fifth slide"
+        />
       </div>
     </div>
   );
