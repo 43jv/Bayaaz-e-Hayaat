@@ -3,12 +3,26 @@ import React from "react";
 function About() {
   return (
     <div>
+      <header id="header">
+        <div className="intro">
+          <div className="overlay">
+            <div className="container">
+              <div className="row">
+                <div className="intro-text">
+                  <div>
+                  <h1 style={{marginBottom  :"10vh"}} >About Us</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </header>
       <div id="about">
         <div className="container">
           <div className="row">
-            <div style={{ marginTop: "15vh" }}>
+            <div style={{ marginTop: "2vh" }}>
               <div >
-                <h2>About Us</h2>
                 <p>
                  "Bayāz" in Urdu refers to a notebook or diary in which people
                   write their favourite poetry or other memorable ideas and
@@ -44,6 +58,7 @@ function About() {
         </div>
       </div>
     </div>
+ 
   );
 }
 

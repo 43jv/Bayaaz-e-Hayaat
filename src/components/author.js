@@ -59,7 +59,22 @@ const Author = () => {
   const classes = useStyles();
 
   return (
-    <div style={{ marginTop: "40px" }}>
+    <div> <header id="header">
+    <div className="intro">
+      <div className="overlay">
+        <div className="container">
+          <div className="row">
+            <div className="intro-text">
+              <div>
+              <h1 style={{marginBottom  :"10vh"}} >Authors</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </header>
+    <div>
       <Container sx={{ py: 8 }} maxWidth="md">
         <Grid container spacing={4}>
           {authorCards.map((card) => (
@@ -91,6 +106,7 @@ const Author = () => {
           ))}
         </Grid>
       </Container>
+    </div>
     </div>
   );
 };
