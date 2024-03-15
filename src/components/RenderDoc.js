@@ -1,7 +1,8 @@
-import React,{useState} from "react";
+import React, { useState, useEffect } from "react";
 import { useParams, Link, useLocation } from "react-router-dom";
 import Button from "@mui/material/Button";
 import { textAlign } from "@mui/system";
+import BeS from "./BeS_audio.mp3";
 
 function RenderDoc() {
   const { pdfFileNames } = useParams();
@@ -21,20 +22,67 @@ function RenderDoc() {
     setIsEnglish(true);
   };
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  console.log(fileNames);
   return (
     <div>
-      <h1 style={{textAlign:"center", marginTop: "10vh", font:"Raleway" }}>{title_}</h1>
-      { (eng_info || urdu_info) && (
-  <div style={{ display: "flex",marginRight: "2vh",justifyContent: "flex-end" }}>
-    <Button onClick={toggleToEnglish}>English</Button>
-    <Button onClick={toggleToUrdu}>Urdu</Button>
-  </div>
-)}
-    {isEnglish ? (
-      <div dangerouslySetInnerHTML={{ __html: eng_info }} style={{ fontSize: "20px", marginTop: "1vh",marginLeft: "3vh",marginRight: "3vh", textAlign: "center" }}/>
-    ) : (
-      <div dangerouslySetInnerHTML={{ __html: urdu_info }} style={{ fontSize: "20px", marginTop: "1vh", marginLeft: "3vh",marginRight: "3vh",textAlign: "center" }}/>
-  )}
+      <h1
+        style={{
+          textAlign: "center",
+          marginTop: "10vh",
+          fontFamily: "Raleway, sans-serif",
+          color: "#8b4513",
+          fontWeight: "bold",
+        }}
+      >
+        {title_}
+      </h1>
+
+      {(eng_info || urdu_info) && (
+        <div
+          style={{
+            display: "flex",
+            marginRight: "2vh",
+            justifyContent: "space-between",
+          }}
+        >
+          {title_ === "Baarish e Sang" ? (
+            <audio controls>
+              <source src={BeS} type="audio/mpeg" />
+            </audio>
+          ) : null}
+          <div>
+            <Button onClick={toggleToEnglish}>English</Button>
+            <Button onClick={toggleToUrdu}>Urdu</Button>
+          </div>
+        </div>
+      )}
+      {isEnglish ? (
+        <div
+          dangerouslySetInnerHTML={{ __html: eng_info }}
+          style={{
+            fontSize: "20px",
+            marginTop: "1vh",
+            marginLeft: "3vh",
+            marginRight: "3vh",
+            textAlign: "center",
+          }}
+        />
+      ) : (
+        <div
+          dangerouslySetInnerHTML={{ __html: urdu_info }}
+          style={{
+            fontSize: "20px",
+            marginTop: "1vh",
+            marginLeft: "3vh",
+            marginRight: "3vh",
+            textAlign: "center",
+          }}
+        />
+      )}
+
       <div
         style={{
           display: "flex",

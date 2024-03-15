@@ -35,7 +35,7 @@ function Home() {
         }}
       >
         <div className="about-text" style={{ marginLeft:"15px",marginTop:"15px", width: "50%" }}>
-          <p style={{ fontSize: "22px" }}>
+          <p style={{ fontSize: "19px" }}>
             Bayāz-e-Hayāt is an online archive dedicated to preserving the
             literary and textual heritage of Hyderabad. It offers access to
             well-known as well as rare and hitherto unpublished works by people
