@@ -21,7 +21,7 @@ function Home() {
                 <div className="intro-text">
                   <div>
                     <h1>Bayāz-e-Hayāt</h1>
-                    <p>A Textual Archive of Hyderabad</p>
+                    <p style={{fontFamily:"Craw Modern"}}>A Textual Archive of Hyderabad</p>
                   </div>
                 </div>
               </div>
@@ -35,7 +35,7 @@ function Home() {
         }}
       >
         <div className="about-text" style={{ marginLeft:"15px",marginTop:"15px", width: "50%" }}>
-          <p style={{ fontSize: "19px" }}>
+          <p style={{ fontSize: "23px" }}>
             Bayāz-e-Hayāt is an online archive dedicated to preserving the
             literary and textual heritage of Hyderabad. It offers access to
             well-known as well as rare and hitherto unpublished works by people
@@ -49,7 +49,7 @@ function Home() {
             is from these materials that the name Bayāz-e-Hayāt, i.e. "The
             Notebook of Life," emerges. In addition to these materials — which
             we strive to make available as both scanned images as well as
-            digitized texts — the Bayāz e-Hayāt project also aims to provide
+            digitized texts — the Bayāz-e-Hayāt project also aims to provide
             biographical information and literary history and criticism about
             Hyderabad's multilingual literary culture.
           </p>

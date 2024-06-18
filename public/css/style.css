@@ -11,7 +11,7 @@ html {
 h2,
 h3,
 h4 {
-  font-family: "Raleway", sans-serif;
+  font-family: "Craw Modern Bold";
 }
 h2 {
   text-transform: uppercase;
@@ -55,7 +55,7 @@ a:focus {
 }
 
 .intro h1 {
-  font-family: "Raleway", sans-serif;
+  font-family: "Craw Modern Bold";
   color: #fff;
   text-shadow: -3.5px 0 #545454, 0 3.5px #545454, 3.5px 0 #545454, 0 -3.5px #545454; /* This creates a black border around the text */
   font-size: 80px;
@@ -80,5 +80,5 @@ a:focus {
 
 header .intro-text {
   padding-top: 50vh;
-  padding-bottom: 30vh;
+  padding-bottom: 35vh;
 }

@@ -8,14 +8,14 @@ const useStyles = makeStyles({
     backgroundColor: '#ffffff', 
   },
   title: {
-    fontFamily: 'Raleway, sans-serif',
+    fontFamily: 'Craw Modern Bold',
     color: '#8b4513', 
     fontSize: '24px',
     fontWeight: 'bold',
     flexGrow: 1,
   },
   link: {
-    fontFamily: 'Raleway, sans-serif',
+    fontFamily: 'Craw Modern Bold',
     color: '#8b4513',
     fontSize: '18px',
     fontWeight: 'bold',

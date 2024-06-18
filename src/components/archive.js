@@ -50,7 +50,7 @@ import img6 from "./author_imgs/FAA4.jpg";
 
 const useStyles = makeStyles({
   link: {
-    fontFamily: "Raleway, sans-serif",
+    fontFamily: "Craw Modern Bold",
     color: "blue",
     textDecoration: "none",
     position: "relative",

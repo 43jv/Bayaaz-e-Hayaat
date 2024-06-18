@@ -32,7 +32,7 @@ function RenderDoc() {
         style={{
           textAlign: "center",
           marginTop: "10vh",
-          fontFamily: "Raleway, sans-serif",
+          fontFamily: "Craw Modern Bold",
           color: "#8b4513",
           fontWeight: "bold",
         }}

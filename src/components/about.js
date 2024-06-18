@@ -61,7 +61,7 @@ function About() {
                   </li>
                   <li>
                     {" "}
-                    <strong>Dr. Kamal Karlapalem </strong> s a Professor and
+                    <strong>Dr. Kamal Karlapalem </strong> is a Professor and
                     applied computer scientist at IIIT Hyderabad. He has broad
                     research interests: from conceptual modeling, workflow
                     systems to distributed database systems and performance,

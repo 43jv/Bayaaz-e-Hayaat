@@ -15,7 +15,7 @@ import FAA from "./author_imgs/FAA2.jpg";
 
 const useStyles = makeStyles({
   link: {
-    fontFamily: "Raleway, sans-serif",
+    fontFamily: "Craw Modern Bold",
     color: "blue",
     textDecoration: "none",
     position: "relative",
