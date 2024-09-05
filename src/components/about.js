@@ -46,21 +46,19 @@ function About() {
                 <h2>Contributors</h2>
                 <p>
                   <li>
-                    {" "}
                     <strong>Dr. Nazia Akhtar </strong> is the principal
                     investigator for this project. An Assistant Professor at
                     IIIT Hyderabad, she has been working on the literature and
                     culture of Hyderabad for more than a decade and has written
-                    a book on this theme, titled{" "}
+                    a book on this theme, titled
                     <i>
                       Bibi's Room: Hyderabadi Women and Twentieth-Century Urdu
-                      Prose{" "}
+                      Prose
                     </i>
                     (2022). She also translates Urdu writings from Hyderabad
                     into English.
                   </li>
                   <li>
-                    {" "}
                     <strong>Dr. Kamal Karlapalem </strong> is a Professor and
                     applied computer scientist at IIIT Hyderabad. He has broad
                     research interests: from conceptual modeling, workflow
@@ -75,7 +73,6 @@ function About() {
                     archive.
                   </li>
                   <li>
-                    {" "}
                     <strong> Ramsha Farhan </strong> is a Research Assistant
                     working on this project. With an MA degree in History from
                     SOAS (London), she is responsible for digitizing handwritten
@@ -85,7 +82,6 @@ function About() {
                     catalogue.
                   </li>
                   <li>
-                    {" "}
                     <strong> Jahnavi Voruganti </strong> is B.Tech student
                     pursuing Computer Science Engineering at IIIT Hyderabad.
                     Having spent her childhood in Hyderabad, she has a deep
@@ -93,7 +89,6 @@ function About() {
                     for developing the technical aspects of the website.
                   </li>
                   <li>
-                    {" "}
                     <strong> Paridhi Prasad </strong> is a B.Tech student
                     specializing in Electronics and Communication Engineering at
                     IIIT Hyderabad. Her interest in this project is rooted in

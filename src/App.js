@@ -8,6 +8,7 @@ import Author from "./components/author";
 import Home from "./components/home";
 import Layout from "./components/layout";
 import RenderDoc from "./components/RenderDoc";
+import Tst from "./components/tst.js";
 
 export default function App() {
   return (
@@ -19,6 +20,8 @@ export default function App() {
           <Route path="/archive/:author" element={<Archive />} />
           <Route path="/author" element={<Author />} />
           <Route path="/RenderDoc/:pdfFileNames" element={<RenderDoc />} />
+          <Route path="/tst" element={<Tst/>} />
+
         </Route>
       </Routes>
     </BrowserRouter>

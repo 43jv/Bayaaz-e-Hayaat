@@ -69,6 +69,8 @@ export default function NavBar() {
             <li className={classes.listItem}><Link to="/" className={classes.link}>Home</Link></li>
             <li className={classes.listItem}><Link to="/about" className={classes.link}>About Us</Link></li>
             <li className={classes.listItem}><Link to="/author" className={classes.link}>Authors</Link></li>
+            <li className={classes.listItem}><Link to="/tst" className={classes.link}>Search</Link></li>
+          
           </Toolbar>
         </AppBar>
       </div>
