@@ -9,7 +9,7 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { makeStyles } from "@material-ui/core/styles";
-import { Link, useParams } from "react-router-dom";
+import { generatePath, Link, useParams } from "react-router-dom";
 
 import AKSZ from "./data/scans/Adeeba_ki_Samaaji_Zimmedaari.pdf";
 import HBC from "./data/scans/Humne_Bandooq_Chalaai.pdf";
@@ -83,43 +83,49 @@ export const authorWorks = [
     title: "Adeeba ki Samaaji Zimmedaari",
     image: AKSZ,
     author: "Fatima Alam Ali", // Add actual author name
+    magazine:"",
+    genre:"",
+    year:"Not Dated",
     engInfo: "",
     urduInfo: "",
-    keywords: [],
+    keywords: ["Urdu", "Hyderabad", "Urdu essay", "mazmuun", "women writers", "social issues"]
   },
   {
     id: 2,
-    title: "Aiwan e Ghazal",
+    title: "Aiwan-e-Ghazal",
     image: AEG,
     author: "Jeelani Bano",
+    year: "1976",
     engInfo: `<strong> Aiwan-e-Ghazal </strong> (trans. The Palace of Ghazal) is a 1976 novel by <a href="/archive/Jeelani%20Bano" target="_blank"> Jeelani Bano</a>. Set in the twilight of the British Raj and early years of independence in India, the story unfolds in the stratified feudal society of the erstwhile Hyderabad state. Depicting the impact of Hyderabad’s political instability, land reform, urbanisation, and assimilation on a wide array of caste-class groups, the main themes of the book are feudal oppression and the transformation of Urdu language and literature in the aftermath of national independence. The women, including the titular character, are the focus of the novel, and live their lives in the zenana of the nobility as well as the rural uprisings that challenged it. Punctuated by a collection of ghazals, amatory Urdu poems, the narrative disrupts the monotholic conception of Hyderabadi Muslims and describes the decline of Urdu literary culture and the political prestige of the ruling class. The book’s publication marks an important moment in modern Urdu literature from the Deccan.`,
     urduInfo: `
     ایوانِ غزل (غزل کا محل) جیلانی بانو کا 1976 کا ایک ناول ہے۔ برطانوی راج کے آخری اور ہندوستان میں آزادی کے ابتدائی سالوں پر مبنی یہ کہانی سابقہ حیدرآباد ریاست کے جاگیردارانہ سماج میں پیش آتی ہے۔ اس کہانی میں حیدرآباد کے سیاسی عدم استحکام، زمینی اصلاحات، شہری کاری، اور ذات پات کے مختلف گروہوں پر انضمام کے اثرات کو دکھایا گیا ہے۔ کتاب کے مرکزی موضوعات جاگیردارانہ جبر اور آزادی کے بعد اردو زبان و ادب کی تبدیلی اور زوال ہیں۔ عورتیں ناول کے مرکزی کردار ہیں; وہ پدرانہ اشرافیہ کے زنانہ اور اس کی مخالفت کرنے والی بغاوتوں دونوں میں رہتے ہیں۔ غزلوں کے مجموعے پر مشتمل یہ بیانیہ حیدرآبادی مسلم معاشرے کے یک سنگی تصور میں خلل ڈالتا ہے اور اردو ادبی ثقافت اور حکمران طبقے کے سیاسی وقار کے زوال کو بیان کرتا ہے۔ اس کتاب کی اشاعت جدید دکنی اردو ادب میں ایک اہم لمحہ ہے۔
     
     `,
-    keywords: [],
+    keywords: ["Hyderabad", "feudalism", "feudal aristocracy", "deodi", "haveli", "Progressive Writers' Association", "Nizam of Hyderabad", "Urdu", "Urdu novel", "Urdu ghazal", "transfer of power", "Police Action", "Telangana Struggle", "zanana", "pardah", "patriarchy", "Hyderabadi Muslims"],
   },
   {
     id: 3,
-    title: "Baarish e Sang",
+    title: "Baarish-e-Sang",
     image: BES,
     digitisedText: BEST,
+    year: "1985",
     author: "Jeelani Bano",
     engInfo: `<strong> Baarish-e-Sang </strong> (trans. Rainfall of Stones) is a 1985 novel by <a href="/archive/Jeelani%20Bano" target="_blank">Jeelani Bano</a>. The story is set in the erstwhile Nizam’s state of Hyderabad in the 1940s during the fever-pitch of the Telangana peasant uprisings and political transformations. With central themes of exploitation by and liberation from a feudal gentry, the novel sees a young boy struggling against the chains of both bonded labour in the villages and capitalist servitude in the cities. Best read in conjunction with Bano’s first novel Aiwan-e-Ghazal, Baarish-e-Sang explores feudalism, patriarchy, violence, subjugation, and the fight for freedom as a “rainfall of stones” during a formative moment in India’s lesser-known history.`,
     urduInfo: `
     باریش سنگ جیلانی بانو کا 1985 کا ناول ہے۔ یہ کہانی 1940 کی دہائی میں نظام کی ریاست حیدرآباد میں تلنگانہ کسانوں کی بغاوتوں اور سیاسی تبدیلیوں کے عروج کے دوران پیش آتی ہے۔ کہانی کا مرکزی موضوع جاگیرداروں کا  استحصال اور اس سے آزادی ہے۔ اس میں ایک نوجوان کسان کو دیہات میں بندھوا مزدوری اور شہر میں سرمایہ دارانہ غلامی دونوں کی زنجیروں کے خلاف جدوجہد کرتے ہوئے دکھایا گیا ہے۔ یہ کتاب بانو کے پہلے ناول ایوانِ غزل کے ساتھ مل کر بھتر پڑھی جاتی ہے۔ باریش سنگ ہندوستان کی کم معروف تاریخ کے ایک ابتدائی لمحے کے دوران جاگیرداری، پدرانہ نظام، تشدد، محکومی، اور آزادی کی لڑائی کو "پتھروں کی بارش" کے طور پر پیش کرتا ہے۔
     
     `,
-    keywords: [],
+    keywords: ["Hyderabad", "Nizam of Hyderabad", "feudalism", "patriarchy", "Telangana", "Telangana peasantry", "communal violence", "sexual violence", "sexual exploitation", "bonded labour / vetti chakri", "patriarchy", "Progressive Writers' Association", "Urdu", "Urdu novel", "progressive writing"],
   },
   {
     id: 4,
     title: "Kulliyaat-e-Jeelani Bano",
     image: KJB,
+    year: "Various Years",
     author: "Jeelani Bano",
     engInfo: "",
     urduInfo: "",
-    keywords: [],
+    keywords: ["Urdu short story", "short story", "afsanah", "gender", "class", "communalism", "progressive writing", "individual", "modernity", "revolution", "science and technology", "technology and society", "independence", "modernism", "abstractism", "social realism", "taraqqi-pasand tehreek", "haqeeqat-pasand tehreek", "tajreediyat", "jadeediyat"],
   },
 
   {
@@ -127,90 +133,99 @@ export const authorWorks = [
     title: "Badalti Qudratein aur Khawateen",
     image: BQS,
     digitisedText: BQT,
+    year: "Not Dated",
     author: "Fatima Alam Ali",
     engInfo: "",
     urduInfo: "",
-    keywords: [],
+    keywords: ["Urdu", "Hyderabad", "Urdu essay", "mazmuun", "gender", "women’s issues", "social issues"],
   },
   {
     id: 6,
     title: "Humaara bhi Kya Zamaana Tha",
+    year:"Not Dated",
     image: HBS,
     digitisedText: HBT,
     author: "Fatima Alam Ali",
     engInfo: "",
     urduInfo: "",
-    keywords: [],
+    keywords: ["Urdu", "Hyderabad", "Urdu essay", "mazmuun", "history", "society", "culture"],
   },
   {
     id: 7,
     title: "Humne Bandooq Chalaai",
     image: HBC,
+    year:"Not Dated",
     author: "Fatima Alam Ali",
     engInfo: "",
     urduInfo: "",
-    keywords: [],
+    keywords: ["Urdu", "Hyderabad", "Urdu essay", "mazmuun", "humour", "tanz-o-mizaah"],
   },
   {
     id: 8,
     title: "Meri Zubaan wa Qalam Se Kisi ka Dil na Dukhey",
     image: MZS,
     digitisedText: MZT,
+    year:"Not Dated",
     author: "Fatima Alam Ali",
     engInfo: "",
     urduInfo: "",
-    keywords: [],
+    keywords: ["Urdu", "Hyderabad", "Urdu essay", "mazmuun", "apology", "letter"],
   },
 
   {
     id: 9,
     title: "Personal Law mein Tabdeeli ka Haal",
     image: PLH,
+    year:"Not Dated",
     digitisedText: PLHT,
     author: "Fatima Alam Ali",
     engInfo: "",
     urduInfo: "",
-    keywords: [],
+    keywords: ["Urdu", "Hyderabad", "Urdu essay", "mazmuun", "gender", "Muslim Personal Law", "women’s rights", "Muslim women"]
   },
   {
     id: 10,
     title: "Rationing aur Hum",
     image: RAH,
+    year:"1946",
     author: "Fatima Alam Ali",
     engInfo: "",
     urduInfo: "",
-    keywords: [],
+    keywords: ["Urdu", "Hyderabad", "Urdu essay", "mazmuun", "World War II", "austerity", "war shortages"],
   },
 
   {
     id: 11,
     title: "Recipes",
     image: FAAR,
+    year:"Not Dated",
     digitisedText: FRT,
     author: "Fatima Alam Ali",
     engInfo: "",
     urduInfo: "",
-    keywords: [],
+    keywords: [ "Urdu", "Hyderabad", "recipes","domestic management", "domestic labour", "culture", "social history", "culinary history", "cuisine", "Hyderabadi cuisine"],
   },
   {
     id: 12,
     title: "Sarojini Naidu",
     image: SN,
+    year:"Not Dated",
     author: "Fatima Alam Ali",
     engInfo: "",
     urduInfo: "",
-    keywords: [],
+    keywords: ["Urdu", "Hyderabad", "Urdu essay", "mazmuun", "Sarojini Naidu", "Hyderabadis", "history", "independence", "freedom struggle", "political activism", "women poets", "Dakhni", "Mulki"],
   },
   {
     id: 13,
     title: "Yaadash Bakhair",
     image: YB,
+    year:"1989",
     author: "Fatima Alam Ali",
     engInfo: `<strong> Yaadash Bakhair </strong> is a 1989 collection of khaaka (pen-portraiture) and tanz-o-mizah (satire and humour) essays authored by <a href="/archive/Fatima%20Alam%20Ali" target="_blank">Fatima Alam Ali</a>. The title of the collection is Persian for “May God preserve them,” or “Good remembrance,” and the essays within are appropriately based on Ali’s memories of contemporary figures in Hyderabadi society. These begin with her fond yet uneasy memories of her own father Qazi Abdul Ghaffar, a Progressive writer and journalist, for whose influence she is both grateful and self-conscious. The following essays are based on her memories of Agha Hyder Hussain, her father’s friend from Aligarh, Islamic scholar Habib ur-Rehman, her girlhood friend and Urdu literary stalwart Qurratulain Hyder, her revered and maternal Urdu teacher Razia Sajjad Zaheer, and Progressive Urdu poet Makhdoom Mohiuddin. Her most significant and exhaustive recollection is an essay titled Adabi Mehfil or “Literary Gathering,” which explores her memories of a mushayrah, a poetry recitation event, at her father’s home in 1945 and sees her characterise the luminaries she has grown up around. Running through the collection is the overarching theme of the nature of memory, its mischief, subjectivity, unreliability, and specificity.`,
 
     urduInfo: ` یادش بخیر 1989 میں فاطمہ عالم علی کی تحریر کردہ خاکہ اور تنز و میزہ کے مضامین کا مجموعہ ہے۔ مجموعے کے عنوان کا مطلب فارسی میں "خدا انہیں محفوظ رکھے،" یا "اچھی یاد" ہے، اور اس کے اندر موجود مضامین حیدرآبادی معاشرے میں معاصر شخصیات کے بارے میں مصنف کی یادوں پر مبنی ہیں۔اس مجموعے کا آغاز ان کے اپنے والد قاضی عبدالغفار، جو ایک ترقی پسند مصنف اور صحافی تھے، کی ان کی دلکش لیکن بے چین یادوں سے ہوتا ہے، جن کے اثر و رسوخ کے لیے وہ مشکور بھی ہیں اور فکر مند بھی۔مندرجہ ذیل مضامین آغا حیدر حسین، علی گڑھ سے ان کے والد کے دوست، اسلامی اسکالر حبیب الرحمان، ان کے بچپن کے دوست اور اردو ادب کے ماہر قرۃ العین حیدر، ان کی محترم اور مادر علمی اردو استاد رضیہ سجاد ظہیر، اور اردو کے ترقی پسند شاعر کی یادوں مخدوم محی الدین پر مبنی ہیں۔ان کی سب سے اہم اور مکمل یادداشت ادبی محفل کے عنوان سے ایک مضمون ہے جس میں 1945 میں اپنے والد کے گھر ہونے والے مشاعرے کی ان کی یادوں کو بیان کیا گیا ہے۔ اس میں وہ ان ادبی شخصیات کو نمایاں کرتی ہے جنہیں وہ بچپن سے جانتی ہے۔اس مجموعے کا مرکزی موضوع انسانی یادداشت کی نوعیت، شرارت، ناقابل اعتباری اور خاصیت ہے۔
     `,
-    keywords: [],
+    keywords: ["Hyderabad", "women's writing Urdu essay", "Urdu pen portrait", "khaaka", "inshaiya", "Progressive Writers' Association", "Urdu poetry", "Urdu mushaira", "progressive writing", "life-writing","Qazi Abdul Ghaffar", "Makhdoom Mohiuddin", "Razia Sajjad Zaheer"],
   },
   {
     id: 14,
@@ -1617,6 +1632,10 @@ const Archive = () => {
                             : ""
                         }?title=${encodeURIComponent(
                           card.title
+                        )}&year=${encodeURIComponent(
+                          card.year
+                        )}&author=${encodeURIComponent(
+                          card.author
                         )}&engInfo=${encodeURIComponent(
                           card.engInfo
                         )}&urduInfo=${encodeURIComponent(

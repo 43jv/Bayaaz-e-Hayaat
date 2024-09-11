@@ -9,13 +9,14 @@ function RenderDoc() {
   const fileNames = pdfFileNames.split(",");
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
-  const title_ = queryParams.get("title") || "";
-  const eng_info = queryParams.get("engInfo") || "";
-  const urdu_info = queryParams.get("urduInfo") || "";
-  const genre = queryParams.get("genre") || "";
-  const magazine = queryParams.get("magazine") || "";
-  const year = queryParams.get("year") || "";
-  const keywords = queryParams.get("keywords") || "";
+  const title_ = queryParams.get("title");
+  const author = queryParams.get("author"); 
+  const eng_info = queryParams.get("engInfo") ;
+  const urdu_info = queryParams.get("urduInfo");
+  const genre = queryParams.get("genre") ;
+  const magazine = queryParams.get("magazine") ;
+  const year = queryParams.get("year") ;
+  const keywords = queryParams.get("keywords") ;
   const [isEnglish, setIsEnglish] = useState(true); // State to track language display
 
   const toggleToUrdu = () => {
@@ -29,7 +30,7 @@ function RenderDoc() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  console.log(fileNames);
+
   return (
     <div>
       <h1
@@ -44,11 +45,12 @@ function RenderDoc() {
         {title_}
       </h1>
       <div style={{ textAlign: "center", marginTop: "2vh" }}>
+      <p><strong>Author:</strong> {author}</p>
         <p><strong>Genre:</strong> {genre}</p>
         <p><strong>Magazine:</strong> {magazine}</p>
         <p><strong>Year:</strong> {year}</p>
         <p><strong>Keywords:</strong> {keywords}</p>
-      </div>
+     </div>
       {(eng_info || urdu_info) && (
         <div
           style={{
@@ -57,7 +59,7 @@ function RenderDoc() {
             justifyContent: "space-between",
           }}
         >
-          {title_ === "Baarish e Sang" ? (
+          {title_ === "Baarish-e-Sang" ? (
             <audio controls>
               <source src={BeS} type="audio/mpeg" />
             </audio>
