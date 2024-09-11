@@ -18,7 +18,7 @@ import AEG from "./data/text/Aiwan_e_Ghazal.pdf";
 import BES from "./data/text/Barish_e_Sang.pdf";
 import BEST from "./data/text/BeH_BeS_Translation_Excerpt.pdf";
 
-import MKM from "./data/text/Mom_ki_Maryam.pdf";
+import KJB from "./data/text/Kulliyat_Vol_1 .pdf";
 
 import YB from "./data/text/Yaadash_Bakhair.pdf";
 import YBS from "./data/text/YB_summary.pdf";
@@ -111,8 +111,8 @@ export const authorWorks = [
   },
   {
     id: 4,
-    title: "Mom ki Maryam",
-    image: MKM,
+    title: "Kulliyaat-e-Jeelani Bano",
+    image: KJB,
     author: "Jeelani Bano",
     engInfo: "",
     urduInfo: "",
@@ -1288,6 +1288,7 @@ const Archive = () => {
       بانو کا کام سماجی تبصرے، مزاح، درد، ستم ظریفی اور انسانی حالت کی پیچیدگیوں کو بیان کرتا ہے۔ دکن سے آنے والی ایک خاتون مصنفہ کے طور پر، وہ ترقی پسند مصنفین کی تنظیم سے باہر ایک بنیاد پرست سماجی اور سیاسی آواز کے لیے اردو ادب میں ایک اہم مقام رکھتی ہیں۔
       `
       : "";
+    const sortedWorks = filteredCards.sort((a, b) => a.title.localeCompare(b.title));
 
   return (
     <div>

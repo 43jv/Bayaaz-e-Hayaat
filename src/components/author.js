@@ -1,16 +1,12 @@
-import React from "react";
-import Button from "@mui/material/Button";
-import Card from "@mui/material/Card";
+import React, { useState } from "react";
+import { Container, Grid, Card, Button } from "@mui/material";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
-import Container from "@mui/material/Container";
 import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
-
-// Link Styles
+// Link and Button Styles
 const useStyles = makeStyles({
   link: {
     fontFamily: "Craw Modern Bold",
@@ -42,343 +38,435 @@ const useStyles = makeStyles({
 export const authorCards = [
   {
     id: 1,
-    title: "Jeelani Bano"
+    title: "Jeelani Bano",
+    language: "Urdu",
   },
   {
     id: 2,
-    title: "Fatima Alam Ali"
+    title: "Fatima Alam Ali",
+    language: "Urdu",
   },
   {
     id: 3,
-    title: "Gottamukkala Mangayamma"
+    title: "Gottamukkala Mangayamma",
+    language: "Telugu",
   },
   {
     id: 4,
-    title: "Kuppili Padma"
+    title: "Kuppili Padma",
+    language: "Telugu",
   },
   {
     id: 5,
-    title: "Muppala Ranganayakamma"
+    title: "Muppala Ranganayakamma",
+    language: "Telugu",
   },
   {
     id: 6,
-    title: "P.Satyavati"
+    title: "P.Satyavati",
+    language: "Telugu",
   },
   {
     id: 7,
-    title: "Bandaru Acchamamba"
+    title: "Bandaru Acchamamba",
+    language: "Telugu",
   },
   {
     id: 8,
-    title: "Kanuparti Varalakshamma"
+    title: "Kanuparti Varalakshamma",
+    language: "Telugu",
   },
   {
     id: 9,
-    title: "Yellapragada Sita Kumari"
+    title: "Yellapragada Sita Kumari",
+    language: "Telugu",
   },
   {
     id: 10,
-    title: "Achanta Sarada Devi"
+    title: "Achanta Sarada Devi",
+    language: "Telugu",
   },
   {
     id: 11,
-    title: "Illindala Saraswati Devi"
+    title: "Illindala Saraswati Devi",
+    language: "Telugu",
   },
   {
     id: 12,
-    title: "K Ramalakshmi"
+    title: "K Ramalakshmi",
+    language: "Telugu",
   },
   {
     id: 13,
-    title: "M. Pushpavati Devi"
+    title: "M. Pushpavati Devi",
+    language: "Telugu",
   },
   {
     id: 14,
-    title: "Dvivedula Vishalakshi"
+    title: "Dvivedula Vishalakshi",
+    language: "Telugu",
   },
   {
     id: 15,
-    title: "G. Rajyalakshmi"
+    title: "G. Rajyalakshmi",
+    language: "Telugu",
   },
   {
     id: 16,
-    title: "Malathi Chendur"
+    title: "Malathi Chendur",
+    language: "Telugu",
   },
   {
     id: 17,
-    title: "Janaki Rani"
+    title: "Janaki Rani",
+    language: "Telugu",
   },
   {
     id: 18,
-    title: "T.V Ratnavali"
+    title: "T.V Ratnavali",
+    language: "Telugu",
   },
   {
     id: 19,
-    title: "Thenneti Krishnaveni Janaki Ramahemalatha"
+    title: "Thenneti Krishnaveni Janaki Ramahemalatha",
+    language: "Telugu",
   },
   {
     id: 20,
-    title: "N.Devaki Devi"
+    title: "N.Devaki Devi",
+    language: "Telugu",
   },
   {
     id: 21,
-    title: "Sunkara and Vasireddi"
+    title: "Sunkara and Vasireddi",
+    language: "Telugu",
   },
   {
     id: 22,
-    title: "Kondapalli Koteshwaramma"
+    title: "Kondapalli Koteshwaramma",
+    language: "Telugu",
   },
   {
     id: 23,
-    title: "Gogu Shyamala"
+    title: "Gogu Shyamala",
+    language: "Telugu",
   },
   {
     id: 24,
-    title: "Dr. Vinodini"
+    title: "Dr. Vinodini",
+    language: "Telugu",
   },
   {
     id: 25,
-    title: "Jajula Gowri"
+    title: "Jajula Gowri",
+    language: "Telugu",
   },
   {
     id: 26,
-    title: "Joopaka Shubhadra"
+    title: "Joopaka Shubhadra",
+    language: "Telugu",
   },
   {
     id: 27,
-    title: "Perumandla Sridevi"
+    title: "Perumandla Sridevi",
+    language: "Telugu",
   },
   {
     id: 28,
-    title: "Volga(P.Lalitha kumari)"
+    title: "Volga(P.Lalitha kumari)",
+    language: "Telugu",
   },
   {
     id: 29,
-    title: "J. Varalakshmi"
+    title: "J. Varalakshmi",
+    language: "Telugu",
   },
   {
     id: 30,
-    title: "Padmavati Devi"
+    title: "Padmavati Devi",
+    language: "Telugu",
   },
   {
     id: 31,
-    title: "Vijayalakshmi"
+    title: "Vijayalakshmi",
+    language: "Telugu",
   },
   {
     id: 32,
-    title: "Kolakaluri Swaroopa Rani"
+    title: "Kolakaluri Swaroopa Rani",
+    language: "Telugu",
   },
   {
     id: 33,
-    title: "Darisi Sasi Nirmala"
+    title: "Darisi Sasi Nirmala",
+    language: "Telugu",
   },
   {
     id: 34,
-    title: "Vijayasri"
+    title: "Vijayasri",
+    language: "Telugu",
   },
   {
     id: 35,
-    title: "Challapalli Swaroopa Rani"
+    title: "Challapalli Swaroopa Rani",
+    language: "Telugu",
   },
   {
     id: 36,
-    title: "M Gowri"
+    title: "M Gowri",
+    language: "Telugu",
   },
   {
     id: 37,
-    title: "Vijaya kumari"
+    title: "Vijaya kumari",
+    language: "Telugu",
   },
   {
     id: 38,
-    title: "Sripada Subramanya Shastry"
+    title: "Sripada Subramanya Shastry",
+    language: "Telugu",
   },
   {
     id: 39,
-    title: "B. S Ramulu"
+    title: "B. S Ramulu",
+    language: "Telugu",
   },
   {
     id: 40,
-    title: "Sannapureddi Venkatarami Reddy"
+    title: "Sannapureddi Venkatarami Reddy",
+    language: "Telugu",
   },
   {
     id: 41,
-    title: "Allam Rajaih"
+    title: "Allam Rajaih",
+    language: "Telugu",
   },
   {
     id: 42,
-    title: "Shanthi Narayana"
+    title: "Shanthi Narayana",
+    language: "Telugu",
   },
   {
     id: 43,
-    title: "Kaluva Mallaia"
+    title: "Kaluva Mallaia",
+    language: "Telugu",
   },
   {
     id: 44,
-    title: "Kolakaluri Enoch"
+    title: "Kolakaluri Enoch",
+    language: "Telugu",
   },
   {
     id: 45,
-    title: "Toleti Jaganmohan Rao"
+    title: "Toleti Jaganmohan Rao",
+    language: "Telugu",
   },
   {
     id: 46,
-    title: "Boya Janagaiah"
+    title: "Boya Janagaiah",
+    language: "Telugu",
   },
   {
     id: 47,
-    title: "Vemula Yellaiah"
+    title: "Vemula Yellaiah",
+    language: "Telugu",
   },
   {
     id: 48,
-    title: "Yendluri Sudhakar"
+    title: "Yendluri Sudhakar",
+    language: "Telugu",
   },
   {
     id: 49,
-    title: "Nagappagari Sunder Raju"
+    title: "Nagappagari Sunder Raju",
+    language: "Telugu",
   },
   {
     id: 50,
-    title: "Unnava Laxminarayana"
+    title: "Unnava Laxminarayana",
+    language: "Telugu",
   },
   {
     id: 51,
-    title: "N G Ranga"
+    title: "N G Ranga",
+    language: "Telugu",
   },
   {
     id: 52,
-    title: "Dasarathi Rangacharya"
+    title: "Dasarathi Rangacharya",
+    language: "Telugu",
   },
   {
     id: 53,
-    title: "Kesava Reddy"
+    title: "Kesava Reddy",
+    language: "Telugu",
   },
   {
     id: 54,
-    title: "G Rama Mohan Rao"
+    title: "G Rama Mohan Rao",
+    language: "Telugu",
   },
   {
     id: 55,
-    title: "Chilukuri Devaputra"
+    title: "Chilukuri Devaputra",
+    language: "Telugu",
   },
   {
     id: 56,
-    title: "K. Sabha"
+    title: "K. Sabha",
+    language: "Telugu",
   },
   {
     id: 57,
-    title: "Alwaru Swami"
+    title: "Alwaru Swami",
+    language: "Telugu",
   },
   {
     id: 58,
-    title: "Madduri Nagesh Babu"
+    title: "Madduri Nagesh Babu",
+    language: "Telugu",
   },
   {
     id: 59,
-    title: "Satish Chander"
+    title: "Satish Chander",
+    language: "Telugu",
   },
   {
     id: 60,
-    title: "Vemula Yellayya"
+    title: "Vemula Yellayya",
+    language: "Telugu",
   },
   {
     id: 61,
-    title: "Durga Prasad"
+    title: "Durga Prasad",
+    language: "Telugu",
   },
   {
     id: 63,
-    title: "Nagappa Sundar Raju"
+    title: "Nagappa Sundar Raju",
+    language: "Telugu",
   },
   {
     id: 65,
-    title: "Divakarla Tirupati Sastry and Chellapilla Venkata Sastry"
+    title: "Divakarla Tirupati Sastry and Chellapilla Venkata Sastry",
+    language: "Telugu",
   },
   {
     id: 66,
-    title: "Rayaprolu Subbarao"
+    title: "Rayaprolu Subbarao",
+    language: "Telugu",
   },
   {
     id: 67,
-    title: "Duvvuri Rami Reddy"
+    title: "Duvvuri Rami Reddy",
+    language: "Telugu",
   },
   {
     id: 68,
-    title: "Devulapalli Krishna Sastry"
+    title: "Devulapalli Krishna Sastry",
+    language: "Telugu",
   },
   {
     id: 69,
-    title: "Adivi Bapiraju"
+    title: "Adivi Bapiraju",
+    language: "Telugu",
   },
   {
     id: 70,
-    title: "Tallavajjula Sivasankara Swamy"
+    title: "Tallavajjula Sivasankara Swamy",
+    language: "Telugu",
   },
   {
     id: 71,
-    title: "Vishwanatha Satyanarayana's Girikumarudu"
+    title: "Vishwanatha Satyanarayana's Girikumarudu",
+    language: "Telugu",
   },
   {
     id: 72,
-    title: "Gurramm Jashuva"
+    title: "Gurramm Jashuva",
+    language: "Telugu",
   },
   {
     id: 73,
-    title: "G.Laxminarsaiah and Tripuraneni Srinivas"
+    title: "G.Laxminarsaiah and Tripuraneni Srinivas",
+    language: "Telugu",
   },
   {
     id: 74,
-    title: "Vasireddi Sita Devi"
+    title: "Vasireddi Sita Devi",
+    language: "Telugu",
   },
   {
     id: 75,
-    title: "Sunkara and Vasireddi"
+    title: "Sunkara and Vasireddi",
+    language: "Telugu",
   },
   {
     id: 76,
-    title: "Sunkara Satyanarayana and V. Bhaskara Rao"
+    title: "Sunkara Satyanarayana and V. Bhaskara Rao",
+    language: "Telugu",
   },
   {
     id: 77,
-    title: "Kodavatiganti Kutumba Rao"
+    title: "Kodavatiganti Kutumba Rao",
+    language: "Telugu",
   },
   {
     id: 78,
-    title: "Bollimunta Sivaramakrishna"
+    title: "Bollimunta Sivaramakrishna",
+    language: "Telugu",
   },
   {
     id: 79,
-    title: "Dasarathi"
+    title: "Dasarathi",
+    language: "Telugu",
   },
   {
     id: 80,
-    title: "Somasundar"
+    title: "Somasundar",
+    language: "Telugu",
   },
   {
     id: 81,
-    title: "Arudra"
+    title: "Arudra",
+    language: "Telugu",
   },
   {
     id: 82,
-    title: "Anisetti"
+    title: "Anisetti",
+    language: "Telugu",
   },
   {
     id: 83,
-    title: "Gangineni"
+    title: "Gangineni",
+    language: "Telugu",
   },
   {
     id: 84,
-    title: "Chalam"
+    title: "Chalam",
+    language: "Telugu",
   },
   {
     id: 86,
-    title: "C R Reddy"
-  }
+    title: "C R Reddy",
+    language: "Telugu",
+  },
 ];
-export const addAuthor = (author) => {
-  authorCards.push(author);
-};
+
 // Header + Author Cards
 const Author = () => {
   const classes = useStyles();
+  const [selectedLanguage, setSelectedLanguage] = useState("All");
+  const handleLanguageChange = (language) => {
+    setSelectedLanguage(language);
+  };
+
+  const filteredAuthors =
+    selectedLanguage === "All"
+      ? authorCards
+      : authorCards.filter((card) => card.language === selectedLanguage);
+  const sortedAuthors = filteredAuthors.sort((a, b) => a.title.localeCompare(b.title));
+
   return (
     <div>
       <header id="header">
@@ -394,10 +482,61 @@ const Author = () => {
           </div>
         </div>
       </header>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          marginTop: "1vh",
+        }}
+      >
+        <Button
+          variant="contained"
+          onClick={() => handleLanguageChange("All")}
+          sx={{
+            fontSize: "1.5rem",
+            backgroundColor: "#8b4513",
+            margin: "0 10px",
+            "&:hover": {
+              backgroundColor: "#5a2e0e",
+            },
+          }}
+        >
+          All
+        </Button>
+        <Button
+          variant="contained"
+          onClick={() => handleLanguageChange("Urdu")}
+          sx={{
+            fontSize: "1.5rem",
+            backgroundColor: "#8b4513",
+            margin: "0 10px",
+            "&:hover": {
+              backgroundColor: "#5a2e0e",
+            },
+          }}
+        >
+          Urdu
+        </Button>
+        <Button
+          variant="contained"
+          onClick={() => handleLanguageChange("Telugu")}
+          sx={{
+            fontSize: "1.5rem",
+            backgroundColor: "#8b4513",
+            margin: "0 10px",
+            "&:hover": {
+              backgroundColor: "#5a2e0e",
+            },
+          }}
+        >
+          Telugu
+        </Button>
+      </div>
       <div>
         <Container sx={{ py: 8 }} maxWidth="md">
           <Grid container spacing={4}>
-            {authorCards.map((card) => (
+            {filteredAuthors.map((card) => (
               <Grid item key={card.id} xs={12} sm={6} md={4}>
                 <Card
                   sx={{
@@ -415,17 +554,19 @@ const Author = () => {
                       {card.title}
                     </Typography>
                   </CardContent> */}
-                  <CardActions sx={{ paddingTop: 0 }}>
-                    <Link
-                      to={`/archive/${card.title}`}
-                      className={classes.link}
-                      target="_blank"
-                    >
-                     <Typography gutterBottom variant="h5" component="h2">
-                      {card.title}
-                    </Typography>
-                    </Link>
-                  </CardActions>
+                  <div className={classes.cardContent}>
+                    <CardActions sx={{ paddingTop: 0 }}>
+                      <Link
+                        to={`/archive/${card.title}`}
+                        className={classes.link}
+                        target="_blank"
+                      >
+                        <Typography gutterBottom variant="h5" component="h2">
+                          {card.title}
+                        </Typography>
+                      </Link>
+                    </CardActions>
+                  </div>
                 </Card>
               </Grid>
             ))}
