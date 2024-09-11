@@ -12,6 +12,10 @@ function RenderDoc() {
   const title_ = queryParams.get("title") || "";
   const eng_info = queryParams.get("engInfo") || "";
   const urdu_info = queryParams.get("urduInfo") || "";
+  const genre = queryParams.get("genre") || "";
+  const magazine = queryParams.get("magazine") || "";
+  const year = queryParams.get("year") || "";
+  const keywords = queryParams.get("keywords") || "";
   const [isEnglish, setIsEnglish] = useState(true); // State to track language display
 
   const toggleToUrdu = () => {
@@ -39,7 +43,12 @@ function RenderDoc() {
       >
         {title_}
       </h1>
-
+      <div style={{ textAlign: "center", marginTop: "2vh" }}>
+        <p><strong>Genre:</strong> {genre}</p>
+        <p><strong>Magazine:</strong> {magazine}</p>
+        <p><strong>Year:</strong> {year}</p>
+        <p><strong>Keywords:</strong> {keywords}</p>
+      </div>
       {(eng_info || urdu_info) && (
         <div
           style={{
