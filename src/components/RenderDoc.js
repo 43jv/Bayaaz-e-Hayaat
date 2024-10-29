@@ -33,67 +33,107 @@ function RenderDoc() {
 
   return (
     <div>
-      <h1
-        style={{
-          textAlign: "center",
-          marginTop: "10vh",
-          fontFamily: "Craw Modern Bold",
-          color: "#8b4513",
-          fontWeight: "bold",
-        }}
-      >
-        {title_}
-      </h1>
-      <div style={{ textAlign: "center", marginTop: "2vh" }}>
-      <p><strong>Author:</strong> {author}</p>
+    <h1
+      style={{
+        textAlign: "center",
+        marginTop: "10vh",
+        fontFamily: "Craw Modern Bold",
+        color: "#8b4513",
+        fontWeight: "bold",
+      }}
+    >
+      {title_}
+    </h1>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "space-between",
+        marginTop: "2vh",
+      }}
+    >
+      <div style={{ flex: "1", marginRight: "2vh" }}>
+        <p><strong>Author:</strong> {author}</p>
         <p><strong>Genre:</strong> {genre}</p>
         <p><strong>Magazine:</strong> {magazine}</p>
         <p><strong>Year:</strong> {year}</p>
         <p><strong>Keywords:</strong> {keywords}</p>
-     </div>
-      {(eng_info || urdu_info) && (
-        <div
-          style={{
-            display: "flex",
-            marginRight: "2vh",
-            justifyContent: "space-between",
-          }}
-        >
-          {title_ === "Baarish-e-Sang" ? (
-            <audio controls>
-              <source src={BeS} type="audio/mpeg" />
-            </audio>
-          ) : null}
-          <div>
-            <Button onClick={toggleToEnglish}>English</Button>
-            <Button onClick={toggleToUrdu}>Urdu</Button>
+      </div>
+      <div style={{ flex: "3" }}>
+        {(eng_info || urdu_info) && (
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              marginBottom: "2vh",
+            }}
+          >
+            {title_ === "Baarish-e-Sang" ? (
+              <audio controls>
+                <source src={BeS} type="audio/mpeg" />
+              </audio>
+            ) : null}
+            <div>
+              <button
+                onClick={toggleToEnglish}
+                style={{
+                  backgroundColor: "#8b4513",
+                  color: "#fff",
+                  padding: "10px 20px",
+                  border: "none",
+                  borderRadius: "5px",
+                  cursor: "pointer",
+                  marginRight: "10px",
+                  transition: "background-color 0.3s",
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.backgroundColor = "#5a2e0c";
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.backgroundColor = "#8b4513";
+                }}
+              >
+                English
+              </button>
+              <button
+                onClick={toggleToUrdu}
+                style={{
+                  backgroundColor: "#8b4513",
+                  color: "#fff",
+                  padding: "10px 20px",
+                  border: "none",
+                  borderRadius: "5px",
+                  cursor: "pointer",
+                  transition: "background-color 0.3s",
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.backgroundColor = "#5a2e0c";
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.backgroundColor = "#8b4513";
+                }}
+              >
+                Urdu
+              </button>
+            </div>
           </div>
-        </div>
-      )}
-      {isEnglish ? (
-        <div
-          dangerouslySetInnerHTML={{ __html: eng_info }}
-          style={{
-            fontSize: "20px",
-            marginTop: "1vh",
-            marginLeft: "3vh",
-            marginRight: "3vh",
-            textAlign: "center",
-          }}
-        />
-      ) : (
-        <div
-          dangerouslySetInnerHTML={{ __html: urdu_info }}
-          style={{
-            fontSize: "20px",
-            marginTop: "1vh",
-            marginLeft: "3vh",
-            marginRight: "3vh",
-            textAlign: "center",
-          }}
-        />
-      )}
-
+        )}
+        {isEnglish ? (
+          <div
+            dangerouslySetInnerHTML={{ __html: eng_info }}
+            style={{
+              textAlign: "justify",
+            }}
+          />
+        ) : (
+          <div
+            dangerouslySetInnerHTML={{ __html: urdu_info }}
+            style={{
+              textAlign: "justify",
+            }}
+          />
+        )}
+      </div>
+    </div>
       <div
         style={{
           display: "flex",
