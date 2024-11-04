@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams, Link, useLocation } from "react-router-dom";
 import Button from "@mui/material/Button";
 import { textAlign } from "@mui/system";
-import BeS from "./BeS_audio.mp3";
+import BeS from "./data/BeS_audio.mp3";
 
 function RenderDoc() {
   const { pdfFileNames } = useParams();

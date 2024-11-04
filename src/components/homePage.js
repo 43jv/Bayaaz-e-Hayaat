@@ -1,12 +1,12 @@
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
-import img1 from "./carousel_imgs/1.jpg";
-import img2 from "./carousel_imgs/2.jpeg";
-import img3 from "./carousel_imgs/3.jpg";
-import img4 from "./carousel_imgs/4.jpg";
-import img5 from "./carousel_imgs/5.jpg";
-import img6 from "./carousel_imgs/6.jpg";
-import img7 from "./carousel_imgs/7.jpg";
+import img1 from "./data/carousel_imgs/1.jpg";
+import img2 from "./data/carousel_imgs/2.jpeg";
+import img3 from "./data/carousel_imgs/3.jpg";
+import img4 from "./data/carousel_imgs/4.jpg";
+import img5 from "./data/carousel_imgs/5.jpg";
+import img6 from "./data/carousel_imgs/6.jpg";
+import img7 from "./data/carousel_imgs/7.jpg";
 
 function Home() {
   const images = [img1, img2, img3, img4, img5, img6, img7]; // Array of images

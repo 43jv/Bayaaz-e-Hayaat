@@ -2,13 +2,13 @@ import React from "react";
 import "./index.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import About from "./components/about";
-import Archive from "./components/archive";
-import Author from "./components/author";
-import Home from "./components/home";
+import About from "./components/aboutPage.js";
+import Archive from "./components/authorsPage.js";
+import Author from "./components/authorBibliography.js";
+import Home from "./components/homePage.js";
 import Layout from "./components/layout";
-import RenderDoc from "./components/RenderDoc";
-import SearchBar from "./components/SearchBar.js";
+import RenderDoc from "./components/renderDoc.js";
+import SearchBar from "./components/searchBar.js";
 
 export default function App() {
   return (

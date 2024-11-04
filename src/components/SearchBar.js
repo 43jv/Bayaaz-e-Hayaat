@@ -1,6 +1,18 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { authorWorks, searchAuthorWorks } from './archive';
+import { authorWorks } from './data/authorWorks';
+
+const searchAuthorWorks = (query) => {
+  return authorWorks.filter(
+    (work) =>
+      work.author.toLowerCase().includes(query.toLowerCase()) ||
+      work.title.toLowerCase().includes(query.toLowerCase()) ||
+      (work.keywords &&
+        work.keywords.some((keyword) =>
+          keyword.toLowerCase().includes(query.toLowerCase())
+        ))
+  );
+};
 
 const SearchBar = () => {
   const [books, setBooks] = useState(authorWorks);  
