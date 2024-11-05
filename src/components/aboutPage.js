@@ -18,7 +18,7 @@ function About() {
           </div>
         </div>
       </header>
-      <div id="about">
+      <main id="about">
         <div className="container">
           <div className="row">
             <div style={{ marginTop: "2vh" }}>
@@ -100,10 +100,9 @@ function About() {
             </div>
           </div>
         </div>
-      </div>
+      </main>
     </div>
   );
 }
 
 export default About;
-<div className="list-style"></div>;

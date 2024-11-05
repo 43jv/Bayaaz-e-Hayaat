@@ -1,0 +1,61 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .header {
+    text-align: center;
+    margin-top: 10vh;
+    font-family: "Craw Modern Bold";
+    color: #8b4513;
+    font-weight: bold;
+  }
+  
+  .info-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: 2vh;
+    width: 100%;
+  }
+  
+  .info {
+    flex: 1;
+    margin-right: 2vh;
+  }
+  
+  .content {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2vh;
+  }
+  
+  .button {
+    background-color: #8b4513;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .button:hover {
+    background-color: #5a2e0c;
+  }
+  
+  .transcript {
+    margin-top: 10px;
+  }
+  
+  

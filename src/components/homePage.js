@@ -77,14 +77,14 @@ function Home() {
               <img
                 className="d-block w-100 carousel-image"
                 src={img1}
-                alt="First slide"
+                alt="Picture of Rafia Manzoor-ul-Ameen's Books 'Alam Panah' and 'Yeh Raaste'"
               />
             </Carousel.Item>
             <Carousel.Item>
               <img
                 className="d-block w-100 carousel-image"
                 src={img2}
-                alt="Ameena Tahseen's Book"
+                alt="Picture of Amena Tahseen's 'Hyderabad mein Urdu ka Nisaai Adab'"
               />
             </Carousel.Item>
             <Carousel.Item>
@@ -98,28 +98,28 @@ function Home() {
               <img
                 className="d-block w-100 carousel-image"
                 src={img4}
-                alt="Fourth slide"
+                alt="Picture of Zeenath Sajida's Book"
               />
             </Carousel.Item>
             <Carousel.Item>
               <img
                 className="d-block w-100 carousel-image"
                 src={img5}
-                alt="Fifth slide"
+                alt="Picture of Fatima Alam Ali's Papers and Writings"
               />
             </Carousel.Item>
             <Carousel.Item>
               <img
                 className="d-block w-100 carousel-image"
                 src={img6}
-                alt="Sixth slide"
+                alt="Image of Hussaini Alam House by Huma R.Kidwai"
               />
             </Carousel.Item>
             <Carousel.Item>
               <img
                 className="d-block w-100 carousel-image"
                 src={img7}
-                alt="Seventh slide"
+                alt="Picture of Jeelani Bano's Book"
               />
             </Carousel.Item>
           </Carousel>
