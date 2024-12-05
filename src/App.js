@@ -7,8 +7,8 @@ import Archive from "./components/authorsPage.js";
 import Author from "./components/authorBibliography.js";
 import Home from "./components/homePage.js";
 import Layout from "./components/layout";
-import RenderDoc from "./components/renderDoc.js";
-import SearchBar from "./components/searchBar.js";
+import RenderDoc from "./components/RenderDoc.js";
+import SearchBar from "./components/SearchBar.js";
 
 export default function App() {
   return (
